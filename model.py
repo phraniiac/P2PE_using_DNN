@@ -18,13 +18,13 @@ class Config:
     """
     def __init__(self, **kw):
         self.dropout = 0.4
-        self.lr = 0.01
+        self.lr = 0.001
         self.batch_size = 4096
         self.plain_text_length = 16
         self.cipher_text_length = 128
         self.key_length = self.plain_text_length
-        self.num_epochs = 10
-        self.num_batches = 1000
+        self.num_epochs = 100
+        self.num_batches = 100
 
         ##
         self.update_vars(**kw)

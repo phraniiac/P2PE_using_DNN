@@ -50,8 +50,7 @@ class layers_and_weights():
 		pass
 
 	def FC_layer(self, x, W, b, op_type='relu'):
-		dense = tf.reshape(x, [-1, W.get_shape().as_list()[0]])
-		return tf.nn.relu(tf.add(tf.matmul(dense, W), b))
+		return tf.nn.relu(tf.add(tf.matmul(x, W), b))
 
 	def conv1d_layer(self, x, W, b, strides, padding='SAME'):
 		conv_out = tf.nn.conv1d(x, W, strides, padding)
